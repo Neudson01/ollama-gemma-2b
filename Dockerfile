@@ -3,4 +3,5 @@ FROM ollama/ollama:latest
 
 
 # Define a execução padrão
-CMD ["/bin/sh", "-c", "ollama pull gemma:2b && ollama serve"]
+ENTRYPOINT ["/bin/sh", "-c"]
+CMD ["ollama pull gemma:2b && ollama serve"]
